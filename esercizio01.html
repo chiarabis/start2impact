@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 01 - JS basics</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="user-input" placeholder="Inserisci un numero">
+        <button type="submit" onclick="inputBtn()">Invia</button>
+    </div>
+
+    <style>
+        div {
+            width: 150px;
+            margin: 20px;
+        }
+
+        button {
+            display: block;
+            cursor: pointer;
+            background-color: #c8acd8;
+            color: #000000;
+            border: none;
+            border-radius: 2px;
+            padding: 3px 6px;
+            margin-top: 6px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #996cb4;
+            color: #fff;
+        }
+
+        input {
+            width: 150px;
+        }
+
+        input:focus {
+            background-color: #c8acd8;
+        }
+    </style>
+
+
+    <script>
+        //Scrivi una funzione che, dato un numero restituisca true se il numero è pari, false se è dispari.
+
+        /*let userInput=3;
+        if(userInput % 2 == 0){
+            console.log(true);
+        }else{
+            console.log(false);
+        }*/
+
+
+        /*function inputBtn(){
+            let userInput=document.getElementById("user-input").value;
+
+            if(!/^[0-9]+$/.test(userInput)){
+                alert("accetto solo numeri!")
+            }else{
+                if(userInput % 2 === 0){
+                    console.log("pari")
+                }else{
+                    console.log("dispari")
+                }
+            }
+        }*/
+
+        function inputBtn() {
+            let userInput = document.getElementById("user-input").value;
+            
+            if (/^[A-Z]|[a-z]+|\s|\s+$/.test(userInput)) {
+                alert("inserisci un numero!");
+            } else {
+                if(userInput % 2 === 0){
+                    console.log("pari")
+                }else{
+                    console.log("dispari")
+                }
+            }
+        }
+        
+
+        /*function inputBtn() {
+            let userInput = document.getElementById("user-input").value;
+            
+            if (isNaN(userInput)) {
+                alert("Hai inserito una lettera! Inserisci un numero.");
+            }else{
+                let numero = parseInt(userInput);
+                
+                if (numero % 2 === 0) {
+                alert("Il numero inserito è pari.");
+                } else {
+                alert("Il numero inserito è dispari.");
+                }
+            }
+        }
+
+        // Chiamata alla funzione per avviare il controllo dell'input
+        checkInput();
+        */
+
+        /*function inputBtn() {
+            //let userInput = Number(document.getElementById("user-input").value);
+
+            if(userInput % 2 === 0){
+                console.log("even")
+            }else{
+                console.log("odd") //anche le lettere le trasforma in numero e sono trattate come "odd"
+            }
+        }*/
+    </script>
+</body>
+
+</html>
