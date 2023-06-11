@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 02 - JS basics</title>
+</head>
+<body>
+    <div>
+        <span id="dimensions"></span>
+    </div>
+
+    <style>
+        div{padding: 20px;}
+        span{
+            font-family: Arial, Helvetica, sans-serif;
+            color: blue;
+        }
+    </style>
+    
+    <script>
+        /*Scrivi una funzione che, ogni volta che la finestra del browser viene resizata,
+        emetta un alert con le nuove dimensioni della finestra.*/
+
+        /*function alertResize() {
+            let width = document.documentElement.clientWidth;
+            let height = document.documentElement.clientHeight;
+            alert("Dimensioni correnti: " + width + "x" + height);
+        }
+        window.onresize = alertResize;*/
+
+        //altra soluzione:
+        /*window.addEventListener("resize", alertResize);
+        
+        function alertResize(){
+            alert("width: " + document.documentElement.clientWidth +"\n"+ "height: " + document.documentElement.clientHeight);
+        }*/
+
+
+
+        //se invece di avere un alert volessi visualizzare a schermo ogni volta le dimensioni?
+        function elemResize() {
+            let width = document.documentElement.clientWidth;
+            let height = document.documentElement.clientHeight;
+
+            let elementDimensions = document.getElementById("dimensions");
+            elementDimensions.textContent = "Dimensioni correnti: " + width + "x" + height;
+        }
+        window.onresize = elemResize;
+
+    </script>
+</body>
+</html>
